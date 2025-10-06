@@ -8,6 +8,8 @@ skinparam classAttributeIconVisibility false
 class Pasaporte {
   - numero : String
   - fechaEmision : LocalDate
+  - foto : Foto
+  - titular : Titular
   + setTitular(titular:Titular): void
   + getTitular(): Titular
 }

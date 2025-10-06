@@ -9,6 +9,8 @@ class Celular {
   - imei : String
   - marca : String
   - modelo : String
+  - bateria : Bateria
+  - usuario : Usuario
   + setUsuario(usuario:Usuario): void
   + getUsuario(): Usuario
 }
