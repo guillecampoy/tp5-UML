@@ -1,0 +1,18 @@
+@startuml
+class TarjetaDeCredito {
+- numero: int
+- fechaVencimiento: DateTime
+- cliente: Cliente
+- banco: Banco
+}
+class Cliente {
+- nombre: String
+- dni: string
+}
+class Banco {
+-nombre: String
+-cuit: string
+}
+TarjetaDeCredito "1" -- "1" Cliente : asociación (bi)
+TarjetaDeCredito "1" o-- "1" Banco  : agregación
+@enduml

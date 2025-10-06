@@ -9,10 +9,11 @@ public class Pasaporte {
     private Titular titular;
 
     /** Crea el todo y su parte (Foto). Refuerza la composición. */
-    public Pasaporte(String numero, LocalDate fechaEmision, String imagen, String formato) {
+    public Pasaporte(String numero, LocalDate fechaEmision, String imagen, String formato, Titular titular) {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
         this.foto = new Foto(imagen,formato);
+        this.titular = titular;
     }
 
     /** Mantiene la asociación 1:1 bidireccional coordinada. */

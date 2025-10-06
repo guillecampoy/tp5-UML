@@ -5,9 +5,10 @@ public class Celular {
     private Bateria bateria;  // agregación (parte puede existir fuera)
     private Usuario usuario;  // asociación 1:1 (bi)
 
-    public Celular(String imei, Bateria bateria) {
+    public Celular(String imei, Bateria bateria, Usuario usuario) {
         this.imei = imei;
         this.bateria = bateria;
+        this.usuario = usuario;
     }
 
     public void setUsuario(Usuario nuevo) {

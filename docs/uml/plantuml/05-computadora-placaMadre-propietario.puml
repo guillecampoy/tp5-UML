@@ -1,0 +1,20 @@
+@startuml
+class Computadora {
+-marca: String
+-numeroSerie: int
+-placaMadre: PlacaMadre
+-propietario: Propietario
+}
+class PlacaMadre {
+-modelo: String
+-chipset: String
+}
+
+class Propietario {
+-nombre: String
+-dni: int
+}
+
+Computadora "1" *-- "1" PlacaMadre : composición
+Computadora "1" -- "1" Propietario : asociación (bi)
+@enduml

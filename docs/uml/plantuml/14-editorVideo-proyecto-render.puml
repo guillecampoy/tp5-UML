@@ -1,0 +1,17 @@
+@startuml
+class EditorVideo {
++exportar(formato:String, proyecto:Proyecto):void
+}
+
+class Proyecto {
+-nombre: String
+-duracionMin: int
+}
+
+class Render {
+-formato: String
+}
+
+Render "1" --> "1" Proyecto
+EditorVideo ..> Render : <<create>>
+@enduml

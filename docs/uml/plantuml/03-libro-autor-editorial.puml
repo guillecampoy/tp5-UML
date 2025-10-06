@@ -1,0 +1,31 @@
+@startuml
+title 03 - Libro, Autor, Editorial (1:1)
+
+' Estilo de lectura
+skinparam classAttributeIconVisibility false
+
+' Clases y atributos mínimos según el enunciado
+class Libro {
+  - titulo : String
+  - isbn : String
+  - editorial: Editorial
+  - autor: Autor
+
+}
+class Autor {
+  - nombre : String
+  - nacionalidad : String
+}
+
+class Editorial {
+  - nombre : String
+  - direccion : String
+}
+
+' Asociación: el Libro "posee" un Autor
+Libro "1" --> "1" Autor      : asociación
+
+' Agregación el libro posee una editorial,
+' la misma ya existe Si se elimina el libro la editorial puede existir.
+Libro "1" o-- "1" Editorial : agregación
+@enduml
