@@ -10,6 +10,6 @@ public class Bateria {
     }
 
     public String getModelo() { return modelo; }
-    public int getCargaMah() { return capacidad; }
-    public void setCargaMah(int cargaMah) { this.capacidad = cargaMah; }
+    public int getCapacidad() { return capacidad; }
+    public void setCapacidad(int cargaMah) { this.capacidad = cargaMah; }
 }
