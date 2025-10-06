@@ -8,6 +8,8 @@ skinparam classAttributeIconVisibility false
 class Pasaporte {
   - numero : String
   - fechaEmision : LocalDate
+  + setTitular(titular:Titular): void
+  + getTitular(): Titular
 }
 class Foto {
   - imagen : String
@@ -16,6 +18,9 @@ class Foto {
 class Titular {
   - nombre : String
   - dni : String
+  + setPasaporte(pasaporte:Pasaporte):void
+  + getNombre(): String
+  + getPasaporte(): Pasaporte
 }
 
 ' Composición: el Pasaporte "posee" la Foto (ciclo de vida dependiente)
