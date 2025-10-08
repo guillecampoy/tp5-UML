@@ -1,0 +1,22 @@
+@startuml
+class Impuesto {
+-monto: BigDecimal
+-contribuyente: Contribuyente
++calcular (importe:BigDecimal):void
+
+}
+
+class Contribuyente {
+-nombre: String
+-cuil: String
+
+}
+
+class Calculadora {
+-recargo: BigDecimal
++calcular(impuesto: Impuesto):void
+
+}
+Impuesto "1" --> "1" Contribuyente
+Calculadora ..> Impuesto : <<use>>
+@enduml

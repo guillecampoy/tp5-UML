@@ -1,0 +1,21 @@
+@startuml
+class Reserva {
+-fecha: DateTime
+-hora: int
+-mesa: Mesa
+-cliente: Cliente
+}
+
+class Cliente {
+-nombre: String
+-telefono: int
+}
+
+class Mesa {
+-numero: int
+-capacidad: int
+}
+
+Reserva "1" --> "1" Cliente : asociación (uni)
+Reserva "1" o--  "1" Mesa   : agregación
+@enduml

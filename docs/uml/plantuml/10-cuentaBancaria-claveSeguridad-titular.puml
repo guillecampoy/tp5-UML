@@ -1,0 +1,32 @@
+@startuml
+class CuentaBancaria {
+-cbu: String
+-saldo: BigDecimal
+-claveSeguridad: ClaveSeguridad
+-titular: Titular
++setTitular(nuevo: Titular): void
+}
+
+class ClaveSeguridad {
+-codigo: String
+-ultimaModificacion: DateTime
+}
+
+class Titular {
+-nombre: String
+-dni: String
++setCuentaBancaria(nueva: CuentaBancaria): void
+}
+
+CuentaBancaria "1" *-- "1" ClaveSeguridad : composición
+CuentaBancaria "1" -- "1" Titular         : asociación (bi)
+
+' Notas (opcional)
+note right of CuentaBancaria
+  Deciciones sobre tipos de datos
+
+  * cbu: String, no hay lógica es una referencia numérica
+            por ello no lo defino como un dato de tipo numérico
+  * saldo: BigDecimal, es un tipo de dato adecuado para manejo de dinero en Java
+end note
+@enduml

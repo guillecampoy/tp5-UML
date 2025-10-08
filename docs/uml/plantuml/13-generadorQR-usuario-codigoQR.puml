@@ -1,0 +1,28 @@
+@startuml
+class GeneradorQR {
+-codigoQR CodigoQR
++generar(valor: BigDecimal, usuario: Usuario):void
+
+}
+
+class CodigoQR {
+-valor: BigDecimal
+-usuario: Usuario
+
+}
+
+class Usuario {
+-nombre:String
+-email:String
+
+}
+
+CodigoQR "1" --> "1" Usuario
+GeneradorQR ..> CodigoQR : <<create>>
+
+' Notas (opcional)
+note right of GeneradorQR
+ Se establece valor como BigDecimal, es un tipo de
+ dato adecuado para manejo de dinero
+end note
+@enduml

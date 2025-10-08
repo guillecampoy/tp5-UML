@@ -1,0 +1,46 @@
+@startuml
+title 02 - Celular, Bateria, Usuario (1:1)
+
+' Estilo de lectura
+skinparam classAttributeIconVisibility false
+
+' Clases y atributos mínimos según el enunciado
+class Celular {
+  - imei : String
+  - marca : String
+  - modelo : String
+  - bateria : Bateria
+  - usuario : Usuario
+  + setUsuario(usuario:Usuario): void
+  + getUsuario(): Usuario
+}
+class Bateria {
+  - modelo : String
+  - capacidad : int
+}
+class Usuario {
+  - nombre : String
+  - dni : String
+  + setCelular(celular:Celular): void
+  + getCelular(): Celular
+}
+
+' Agregación: el Celular "posee" la Batería (ciclo de vida dependiente)
+Celular "1" o-- "1" Bateria : agregacion
+
+' Asociación bidireccional 1:1 entre Celular y Usuario
+Celular "1" -- "1" Usuario : asociación bidireccional
+
+' Notas (opcional)
+note right of Celular
+  Agregación hacia :
+  • Ciclo de vida ligado (rombo blanco).
+end note
+
+note as N1
+  Bidireccionalidad:
+  • Cada lado conoce al otro.
+  • Evitar bucles en setters en la implementación.
+end note
+Usuario .. N1
+@enduml

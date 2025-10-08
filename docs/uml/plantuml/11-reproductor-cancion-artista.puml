@@ -1,0 +1,20 @@
+@startuml
+class Reproductor {
+- enReproduccion Cancion
++ reproducir (cancion: Cancion):void
+}
+
+class Cancion {
+-titulo: String
+
+}
+
+class Artista {
+-nombre: String
+-genero: String
+
+}
+
+Cancion "1" --> "1" Artista
+Reproductor ..> Cancion : <<use>>
+@enduml

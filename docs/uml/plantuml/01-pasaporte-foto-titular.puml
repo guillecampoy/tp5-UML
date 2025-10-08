@@ -1,0 +1,46 @@
+@startuml
+title 01 - Pasaporte, Foto, Titular (1:1)
+
+' Estilo de lectura
+skinparam classAttributeIconVisibility false
+
+' Clases y atributos mínimos según el enunciado
+class Pasaporte {
+  - numero : String
+  - fechaEmision : LocalDate
+  - foto : Foto
+  - titular : Titular
+  + setTitular(titular:Titular): void
+  + getTitular(): Titular
+}
+class Foto {
+  - imagen : String
+  - formato : String
+}
+class Titular {
+  - nombre : String
+  - dni : String
+  + setPasaporte(pasaporte:Pasaporte):void
+  + getNombre(): String
+  + getPasaporte(): Pasaporte
+}
+
+' Composición: el Pasaporte "posee" la Foto (ciclo de vida dependiente)
+Pasaporte "1" *-- "1" Foto : composición
+
+' Asociación bidireccional 1:1 entre Pasaporte y Titular
+Pasaporte "1" -- "1" Titular : asociación bidireccional
+
+' Notas (opcional)
+note right of Pasaporte
+  Composición hacia Foto:
+  • Ciclo de vida ligado (rombo negro).
+end note
+
+note as N1
+  Bidireccionalidad:
+  • Cada lado conoce al otro.
+  • Evitar bucles en setters en la implementación.
+end note
+Titular .. N1
+@enduml

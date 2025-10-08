@@ -1,0 +1,21 @@
+@startuml
+class CitaMedica {
+-fecha: DateTime
+-hora: int
+-paciente: Paciente
+-profesional: Profesional
+}
+
+class Paciente {
+-nombre: String
+-obraSocial: String
+}
+
+class Profesional {
+-nombre: String
+-especialidad: String
+}
+
+CitaMedica "1" --> "1" Paciente
+CitaMedica "1" --> "1" Profesional
+@enduml
