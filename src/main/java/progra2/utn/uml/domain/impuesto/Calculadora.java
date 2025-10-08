@@ -18,6 +18,6 @@ public class Calculadora {
     }
 
     public void calcular(Impuesto impuesto) {
-        impuesto.aplicarRecargo(recargo);
+        impuesto.calcular(recargo);
     }
 }

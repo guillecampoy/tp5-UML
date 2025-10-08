@@ -17,6 +17,6 @@ class Usuario {
 }
 
 Documento "1" *-- "1" FirmaDigital : composición
-FirmaDigital "1" o-- "1" Usuario    : agregación hj
+FirmaDigital "1" o-- "1" Usuario    : agregación
 
 @enduml

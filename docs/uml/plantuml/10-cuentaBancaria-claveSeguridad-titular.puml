@@ -4,6 +4,7 @@ class CuentaBancaria {
 -saldo: BigDecimal
 -claveSeguridad: ClaveSeguridad
 -titular: Titular
++setTitular(nuevo: Titular): void
 }
 
 class ClaveSeguridad {
@@ -14,6 +15,7 @@ class ClaveSeguridad {
 class Titular {
 -nombre: String
 -dni: String
++setCuentaBancaria(nueva: CuentaBancaria): void
 }
 
 CuentaBancaria "1" *-- "1" ClaveSeguridad : composición

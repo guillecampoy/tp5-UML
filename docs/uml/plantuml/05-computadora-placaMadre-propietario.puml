@@ -4,6 +4,7 @@ class Computadora {
 -numeroSerie: int
 -placaMadre: PlacaMadre
 -propietario: Propietario
++setPropietario(nuevo: Propietario):void
 }
 class PlacaMadre {
 -modelo: String
@@ -13,6 +14,7 @@ class PlacaMadre {
 class Propietario {
 -nombre: String
 -dni: int
++setComputadora(nueva: Computadora):void
 }
 
 Computadora "1" *-- "1" PlacaMadre : composición

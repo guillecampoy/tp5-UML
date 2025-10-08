@@ -15,11 +15,13 @@ class Libro {
 class Autor {
   - nombre : String
   - nacionalidad : String
+  + getNombre(): String
 }
 
 class Editorial {
   - nombre : String
   - direccion : String
+  + getNombre(): String
 }
 
 ' Asociación: el Libro "posee" un Autor

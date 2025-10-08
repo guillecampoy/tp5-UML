@@ -1,11 +1,13 @@
 @startuml
 class GeneradorQR {
+-codigoQR CodigoQR
 +generar(valor: BigDecimal, usuario: Usuario):void
 
 }
 
 class CodigoQR {
 -valor: BigDecimal
+-usuario: Usuario
 
 }
 

@@ -1,6 +1,8 @@
 @startuml
 class Impuesto {
 -monto: BigDecimal
+-contribuyente: Contribuyente
++calcular (importe:BigDecimal):void
 
 }
 
@@ -11,6 +13,7 @@ class Contribuyente {
 }
 
 class Calculadora {
+-recargo: BigDecimal
 +calcular(impuesto: Impuesto):void
 
 }

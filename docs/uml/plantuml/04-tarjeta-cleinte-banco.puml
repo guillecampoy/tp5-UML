@@ -4,10 +4,12 @@ class TarjetaDeCredito {
 - fechaVencimiento: DateTime
 - cliente: Cliente
 - banco: Banco
++ setCliente(nuevo: Cliente): void
 }
 class Cliente {
 - nombre: String
 - dni: string
++ setTarjeta(nueva TarjetaDeCredito):void
 }
 class Banco {
 -nombre: String

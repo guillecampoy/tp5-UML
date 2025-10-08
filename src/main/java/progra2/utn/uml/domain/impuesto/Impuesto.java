@@ -23,7 +23,7 @@ public class Impuesto {
         return contribuyente;
     }
 
-    public void aplicarRecargo(BigDecimal porcentaje) {
+    public void calcular(BigDecimal porcentaje) {
         BigDecimal factor = BigDecimal.ONE.add(porcentaje);
         this.monto = this.monto.multiply(factor);
     }
