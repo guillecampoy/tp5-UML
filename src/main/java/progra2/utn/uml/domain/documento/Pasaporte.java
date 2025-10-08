@@ -13,7 +13,8 @@ public class Pasaporte {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
         this.foto = new Foto(imagen,formato);
-        this.titular = titular;
+        this.titular = null;
+        setTitular(titular);
     }
 
     /** Mantiene la asociación 1:1 bidireccional coordinada. */

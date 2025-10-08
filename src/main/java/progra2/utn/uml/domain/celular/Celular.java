@@ -8,7 +8,8 @@ public class Celular {
     public Celular(String imei, Bateria bateria, Usuario usuario) {
         this.imei = imei;
         this.bateria = bateria;
-        this.usuario = usuario;
+        this.usuario = null;
+        setUsuario(usuario);
     }
 
     public void setUsuario(Usuario nuevo) {
