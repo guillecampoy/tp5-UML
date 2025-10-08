@@ -11,28 +11,26 @@ Cada ejercicio debe indicar **tipo de relación**, **dirección**, **diagrama UM
 
 ---
 
-## Estructura de proyecto
+## Estructura general del proyecto
 ```text
 tp-uml-relaciones/
 ├─ README.md
 ├─ src/
 │  └─ main/
 │     └─ java/
-│        └─ 
+│        └─ Clases que reflejan la implementación de los UML
 ├─ docs/
 │  ├─ uml/
-│  │  ├─ plantuml/
-│  │  │  ├─ 01-pasaporte-foto-titular.puml
-│  │  │  ├─ 02-celular-bateria-usuario.puml
-│  │  │  ├─ 03-libro-autor-editorial.puml
-│  │  │  ├─ ... 
-│  │  └─ png/
-│  │     ├─ 01-pasaporte-foto-titular.png
-│  │     ├─ 02-celular-bateria-usuario.png
-│  │     ├─ 03-libro-autor-editorial.png
-│  │     ├─ ... 
-│  └─ notas/
-│     └─ decisiones.md
+│    ├─ plantuml/
+│    │  ├─ 01-pasaporte-foto-titular.puml
+│    │  ├─ 02-celular-bateria-usuario.puml
+│    │  ├─ 03-libro-autor-editorial.puml
+│    │  ├─ ... 
+│    └─ png/
+│       ├─ 01-pasaporte-foto-titular.png
+│       ├─ 02-celular-bateria-usuario.png
+│       ├─ 03-libro-autor-editorial.png
+│       ├─ ... 
 └─ .gitignore            
 ```
 
@@ -54,7 +52,6 @@ tp-uml-relaciones/
 ## Herramientas recomendadas
 - **PlantUML** como formato principal.
     - Plugin **IntelliJ IDEA**: “PlantUML Integration”
-- **Alternativas para bosquejos**: UMLetino, draw.io, StarUML.
 ---
 
 ## Cómo ver / generar diagramas
@@ -77,4 +74,4 @@ tp-uml-relaciones/
 ---
 
 ## Licencia
-Este material es de uso académico.
+Material académico para entrega de unidad sobre UML
